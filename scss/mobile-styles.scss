@@ -1,0 +1,70 @@
+@import "./resets";
+@import "./variables";
+@import "./functions-and-mixins";
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 768px) {
+  // hidden classes
+  .hide,
+  .top-header-desktop{
+    display: none !important;
+  }
+
+  // header styles
+  .hold-the-drawer-abeg {
+    position: relative;
+    transition-property: border-radius, background-color;
+  }
+
+  .top-header {
+    display: grid;
+    grid-template-columns: auto auto auto;
+    justify-content: space-between;
+    align-items: center;
+    svg {
+      fill: #fff;
+      cursor: pointer;
+      &:hover {
+        fill: $hover-color;
+      }
+    }
+    span {
+      position: relative;
+    }
+    span > :nth-child(2) {
+      fill: #3690f8;
+      position: absolute;
+      top: -5px;
+      right: -2px;
+    }
+  }
+
+  //   display the drawer on menu toggle
+  .display-top-mobile-drawer {
+    display: block;
+    padding-top: 1em;
+    input[type="text"] {
+      color: #fff;
+    }
+    input {
+      margin-bottom: 1em;
+      width: 100%;
+      background-position: 99% 50%;
+      padding-right: 2em;
+    }
+
+    .mobi-links {
+      list-style-type: none;
+      li {
+        border-top: 1px solid $faded-text-black;
+        a {
+          display: block;
+          padding: 0.8em 0;
+          color: #fff;
+          text-decoration: none;
+          font-weight: weights(bold);
+        }
+      }
+    }
+  }
+}

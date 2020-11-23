@@ -1,0 +1,86 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+::before,
+::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+:root {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 0.875em;
+}
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 768px) {
+  .hide,
+  .top-header-desktop {
+    display: none !important;
+  }
+  .hold-the-drawer-abeg {
+    position: relative;
+    -webkit-transition-property: border-radius, background-color;
+    transition-property: border-radius, background-color;
+  }
+  .top-header {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto auto;
+        grid-template-columns: auto auto auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .top-header svg {
+    fill: #fff;
+    cursor: pointer;
+  }
+  .top-header svg:hover {
+    fill: #c8c2b7;
+  }
+  .top-header span {
+    position: relative;
+  }
+  .top-header span > :nth-child(2) {
+    fill: #3690f8;
+    position: absolute;
+    top: -5px;
+    right: -2px;
+  }
+  .display-top-mobile-drawer {
+    display: block;
+    padding-top: 1em;
+  }
+  .display-top-mobile-drawer input[type="text"] {
+    color: #fff;
+  }
+  .display-top-mobile-drawer input {
+    margin-bottom: 1em;
+    width: 100%;
+    background-position: 99% 50%;
+    padding-right: 2em;
+  }
+  .display-top-mobile-drawer .mobi-links {
+    list-style-type: none;
+  }
+  .display-top-mobile-drawer .mobi-links li {
+    border-top: 1px solid #586069;
+  }
+  .display-top-mobile-drawer .mobi-links li a {
+    display: block;
+    padding: 0.8em 0;
+    color: #fff;
+    text-decoration: none;
+    font-weight: 700;
+  }
+}
+/*# sourceMappingURL=mobile-styles.css.map */

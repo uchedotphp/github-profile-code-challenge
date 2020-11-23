@@ -1,0 +1,12 @@
+@import "./variables";
+
+// functions
+@function weights($weight-name) {
+  @return map-get($map: $font-weights, $key: $weight-name);
+}
+
+// mixins
+@mixin flexCenter {
+  display: flex;
+  align-items: center;
+}

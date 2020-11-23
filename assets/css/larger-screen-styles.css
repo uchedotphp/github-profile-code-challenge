@@ -1,0 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+}
+
+*,
+::before,
+::after {
+  -webkit-box-sizing: inherit;
+          box-sizing: inherit;
+}
+
+:root {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+  font-size: 0.875em;
+}
+
+/* Medium devices and desktops (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+  .display-top-mobile-drawer,
+  .top-header,
+  .hold-the-drawer-abeg {
+    display: none;
+  }
+  .top-header-desktop {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: auto auto;
+        grid-template-columns: auto auto;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .top-header-desktop .left-side > * {
+    margin-right: 1.25em;
+  }
+  .top-header-desktop .left-side {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .top-header-desktop .left-side svg {
+    fill: #fff;
+    cursor: pointer;
+  }
+  .top-header-desktop .left-side svg:hover {
+    fill: #c8c2b7;
+  }
+  .top-header-desktop .left-side input {
+    max-width: 100%;
+    background-position: 96% 50%;
+  }
+  .top-header-desktop .left-side nav.toppest-nav {
+    display: inline-block;
+  }
+  .top-header-desktop .left-side nav.toppest-nav ul li {
+    display: inline-block;
+    margin-right: 0.625em;
+  }
+  .top-header-desktop .left-side nav.toppest-nav ul li a {
+    display: block;
+    text-decoration: none;
+    color: #fff;
+    font-weight: 700;
+  }
+  .top-header-desktop .left-side nav.toppest-nav ul li a:hover {
+    color: #c8c2b7;
+  }
+  .top-header-desktop .left-side nav.toppest-nav ul li:last-child {
+    margin-right: 0;
+  }
+  .top-header-desktop .right-side {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .top-header-desktop .right-side a {
+    color: transparent;
+    margin-left: 1em;
+  }
+  .top-header-desktop .right-side a svg {
+    fill: #fff;
+  }
+  .top-header-desktop .right-side .notif {
+    position: relative;
+  }
+  .top-header-desktop .right-side .notif > :nth-child(2) {
+    fill: #3690f8;
+    position: absolute;
+    top: -5px;
+    right: -2px;
+  }
+  .top-header-desktop .right-side .spaced > :nth-child(2) {
+    margin-left: 0.2em;
+  }
+}
+/*# sourceMappingURL=larger-screen-styles.css.map */

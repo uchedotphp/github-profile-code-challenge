@@ -1,0 +1,30 @@
+@import "./resets";
+@import "./variables";
+@import "./functions-and-mixins";
+
+body {
+  color: $faded-text-black;
+  font-family: "Roboto", sans-serif;
+  font-weight: weights(regular);
+}
+
+// header styles
+header {
+  background: $base-black-background;
+  padding: 1em 1.2em;
+
+  .display-top-mobile-drawer {
+    ::placeholder {
+      color: $hover-color;
+    }
+  }
+  input {
+    padding: 0.4em 0.5em;
+    border-radius: 0.3125em;
+    background: transparent url(./../images/search-key-slash.svg) right
+      no-repeat;
+    align-self: center;
+    padding-left: 1em;
+    border: 1px solid $faded-text-black;
+  }
+}
