@@ -20,7 +20,8 @@
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 768px) {
   .hide,
-  .top-header-desktop {
+  .top-header-desktop,
+  .navigation-desktop {
     display: none !important;
   }
   .hold-the-drawer-abeg {

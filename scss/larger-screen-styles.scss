@@ -10,6 +10,7 @@
     display: none;
   }
 
+  //   header-tag styles
   .top-header-desktop {
     display: grid;
     grid-template-columns: auto auto;
@@ -62,9 +63,9 @@
     .right-side {
       @include flexCenter;
 
-       a {
-           color: transparent;
-           margin-left: 1em;
+      a {
+        color: transparent;
+        margin-left: 1em;
         svg {
           fill: #fff;
         }
@@ -83,6 +84,69 @@
 
       .spaced > :nth-child(2) {
         margin-left: 0.2em;
+      }
+    }
+  }
+
+  //   styles for the main-tag content
+  main {
+    margin-top: 2em;
+  }
+
+  //   main navigation styles for larger screens
+  .navigation-desktop {
+    display: block;
+    background: #fff;
+    border-bottom: 1px #e1e4e8 solid;
+    .main-nav {
+      div {
+        .col-4 {
+          @include flexCenter;
+          span {
+          }
+          b {
+            margin-left: 0.5em;
+          }
+        }
+
+        .main-nav-links {
+          .links {
+            margin-top: 1em;
+            display: flex;
+            overflow-x: auto;
+            text-transform: capitalize;
+            a:link {
+              span {
+                @include flexCenter;
+
+                .repo-number {
+                  margin-left: 0.5em;
+                  background: #e8eaec;
+                  padding: 0.1em 0.5em;
+                  border-radius: 50%;
+                  display: inline-block;
+                  font-size: 0.9em;
+                }
+              }
+            }
+
+            a {
+              color: $base-black-background;
+              display: block;
+              text-decoration: none;
+              padding: 0 1em 1em;
+
+              &:hover {
+                border-bottom: 2px solid $hover-color;
+              }
+
+              svg {
+                fill: $svg-colors;
+                margin-right: 0.5em;
+              }
+            }
+          }
+        }
       }
     }
   }
