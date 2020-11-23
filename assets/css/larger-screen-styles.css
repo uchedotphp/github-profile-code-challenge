@@ -104,12 +104,12 @@
   main {
     margin-top: 2em;
   }
-  .navigation-desktop {
+  main .navigation-desktop {
     display: block;
     background: #fff;
     border-bottom: 1px #e1e4e8 solid;
   }
-  .navigation-desktop .main-nav div .col-4 {
+  main .navigation-desktop .main-nav div .col-4 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -117,10 +117,10 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .navigation-desktop .main-nav div .col-4 b {
+  main .navigation-desktop .main-nav div .col-4 b {
     margin-left: 0.5em;
   }
-  .navigation-desktop .main-nav div .main-nav-links .links {
+  main .navigation-desktop .main-nav div .main-nav-links .links {
     margin-top: 1em;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -128,7 +128,7 @@
     overflow-x: auto;
     text-transform: capitalize;
   }
-  .navigation-desktop .main-nav div .main-nav-links .links a:link span {
+  main .navigation-desktop .main-nav div .main-nav-links .links a:link span {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -136,7 +136,7 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  .navigation-desktop .main-nav div .main-nav-links .links a:link span .repo-number {
+  main .navigation-desktop .main-nav div .main-nav-links .links a:link span .repo-number {
     margin-left: 0.5em;
     background: #e8eaec;
     padding: 0.1em 0.5em;
@@ -144,16 +144,16 @@
     display: inline-block;
     font-size: 0.9em;
   }
-  .navigation-desktop .main-nav div .main-nav-links .links a {
+  main .navigation-desktop .main-nav div .main-nav-links .links a {
     color: #24292e;
     display: block;
     text-decoration: none;
     padding: 0 1em 1em;
   }
-  .navigation-desktop .main-nav div .main-nav-links .links a:hover {
+  main .navigation-desktop .main-nav div .main-nav-links .links a:hover {
     border-bottom: 2px solid #c8c2b7;
   }
-  .navigation-desktop .main-nav div .main-nav-links .links a svg {
+  main .navigation-desktop .main-nav div .main-nav-links .links a svg {
     fill: #959da5;
     margin-right: 0.5em;
   }

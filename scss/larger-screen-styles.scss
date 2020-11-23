@@ -91,63 +91,68 @@
   //   styles for the main-tag content
   main {
     margin-top: 2em;
-  }
 
-  //   main navigation styles for larger screens
-  .navigation-desktop {
-    display: block;
-    background: #fff;
-    border-bottom: 1px #e1e4e8 solid;
-    .main-nav {
-      div {
-        .col-4 {
-          @include flexCenter;
-          span {
+    //   main navigation styles for larger screens
+    .navigation-desktop {
+      display: block;
+      background: #fff;
+      border-bottom: 1px #e1e4e8 solid;
+      .main-nav {
+        div {
+          .col-4 {
+            @include flexCenter;
+            span {
+            }
+            b {
+              margin-left: 0.5em;
+            }
           }
-          b {
-            margin-left: 0.5em;
-          }
-        }
 
-        .main-nav-links {
-          .links {
-            margin-top: 1em;
-            display: flex;
-            overflow-x: auto;
-            text-transform: capitalize;
-            a:link {
-              span {
-                @include flexCenter;
+          .main-nav-links {
+            .links {
+              margin-top: 1em;
+              display: flex;
+              overflow-x: auto;
+              text-transform: capitalize;
+              a:link {
+                span {
+                  @include flexCenter;
 
-                .repo-number {
-                  margin-left: 0.5em;
-                  background: #e8eaec;
-                  padding: 0.1em 0.5em;
-                  border-radius: 50%;
-                  display: inline-block;
-                  font-size: 0.9em;
+                  .repo-number {
+                    margin-left: 0.5em;
+                    background: #e8eaec;
+                    padding: 0.1em 0.5em;
+                    border-radius: 50%;
+                    display: inline-block;
+                    font-size: 0.9em;
+                  }
                 }
               }
-            }
 
-            a {
-              color: $base-black-background;
-              display: block;
-              text-decoration: none;
-              padding: 0 1em 1em;
+              a {
+                color: $base-black-background;
+                display: block;
+                text-decoration: none;
+                padding: 0 1em 1em;
 
-              &:hover {
-                border-bottom: 2px solid $hover-color;
-              }
+                &:hover {
+                  border-bottom: 2px solid $hover-color;
+                }
 
-              svg {
-                fill: $svg-colors;
-                margin-right: 0.5em;
+                svg {
+                  fill: $svg-colors;
+                  margin-right: 0.5em;
+                }
               }
             }
           }
         }
       }
+    }
+
+    // main content
+    .main-content {
+      
     }
   }
 }

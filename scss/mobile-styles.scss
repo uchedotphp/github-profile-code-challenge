@@ -4,6 +4,43 @@
 
 /* Extra small devices (phones, 600px and down) */
 @media only screen and (max-width: 768px) {
+  .col-s-1 {
+    width: 8.33%;
+  }
+  .col-s-2 {
+    width: 16.66%;
+  }
+  .col-s-3 {
+    width: 25%;
+  }
+  .col-s-4 {
+    width: 33.33%;
+  }
+  .col-s-5 {
+    width: 41.66%;
+  }
+  .col-s-6 {
+    width: 50%;
+  }
+  .col-s-7 {
+    width: 58.33%;
+  }
+  .col-s-8 {
+    width: 66.66%;
+  }
+  .col-s-9 {
+    width: 75%;
+  }
+  .col-s-10 {
+    width: 83.33%;
+  }
+  .col-s-11 {
+    width: 91.66%;
+  }
+  .col-s-12 {
+    width: 100%;
+  }
+
   // hidden classes
   .hide,
   .top-header-desktop,
@@ -65,6 +102,127 @@
           text-decoration: none;
           font-weight: weights(bold);
         }
+      }
+    }
+  }
+
+  //   main content area
+  .main-content {
+    // biography
+    .bio-area {
+      padding: 0.5em 1.2em;
+    }
+
+    .bio-status {
+      @include flexCenter;
+      img {
+        height: 100px;
+      }
+
+      .name {
+        margin-left: 1em;
+        font-size: 2em;
+        // max-width: 46%;
+        max-width: 65%;
+
+        b {
+          display: block;
+          color: $base-black-background;
+        }
+
+        .username {
+          font-size: 0.7em;
+        }
+      }
+    }
+
+    .status {
+      margin-top: 2em;
+      border: 0.5px solid $hover-color;
+      border-radius: 5px;
+      padding: 0.5em 0.5em;
+      @include flexCenter;
+      text-decoration: none;
+
+      .status-text {
+        text-transform: capitalize;
+        font-size: 0.9em;
+        margin-left: 0.5em;
+        color: $base-black-background;
+
+        &:hover {
+          color: inherit;
+        }
+      }
+    }
+    .bio-text {
+      margin: 1em 0;
+      color: $base-black-background;
+      font-size: 1.19em;
+      // word-spacing: .1em;
+    }
+
+    .button {
+      display: block;
+      width: 100%;
+      background: #fafbfc;
+      padding: 0.5em 0;
+      border: 1px solid $hover-color;
+      border-radius: 5px;
+      font-size: 1em;
+      color: $base-black-background;
+      margin-bottom: 1em;
+      cursor: pointer;
+
+      &:hover {
+        background: #f3f4f6;
+      }
+    }
+
+    .contact {
+      margin-bottom: 2em;
+      .email {
+        margin-bottom: 0.5em;
+        @include flexCenter;
+        svg {
+          fill: $faded-text-black;
+          margin-right: 0.5em;
+        }
+        a {
+          color: $base-black-background;
+          text-decoration: none;
+          &:hover {
+            text-decoration: underline;
+            color: blue;
+          }
+        }
+      }
+
+      .following {
+        display: flex;
+      }
+
+      .following a:nth-child(odd) {
+        @include flexCenter;
+        svg {
+          margin-right: 0.5em;
+        }
+      }
+
+      .following a {
+        margin-right: 0.5em;
+        text-decoration: none;
+        color: $base-black-background;
+
+        &:hover {
+          color: blue;
+        }
+        // svg{ //check this guy head well later
+        //   fill: red;
+        // }
+      }
+      .following a:nth-last-child() {
+        margin-right: 0;
       }
     }
   }
