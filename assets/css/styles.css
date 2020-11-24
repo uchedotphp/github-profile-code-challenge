@@ -109,4 +109,90 @@ header input {
   max-width: 1180px;
   margin: 0 auto 0;
 }
+
+.repositories .list-of-repos {
+  padding: 0 1.2em;
+}
+
+.repositories .list-of-repos .single-repo {
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: auto auto;
+      grid-template-columns: auto auto;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  border-top: 1px #e1e4e8 solid;
+  padding: 2em 0;
+}
+
+.repositories .list-of-repos .single-repo .repo-details .repo-title {
+  padding-bottom: 1em;
+}
+
+.repositories .list-of-repos .single-repo .repo-details .repo-title h2 {
+  display: inline-block;
+}
+
+.repositories .list-of-repos .single-repo .repo-details .repo-title h2 a:link,
+.repositories .list-of-repos .single-repo .repo-details .repo-title h2 a:visited {
+  color: #0366d6;
+  text-decoration: none;
+}
+
+.repositories .list-of-repos .single-repo .repo-details .repo-title h2 a:link:hover,
+.repositories .list-of-repos .single-repo .repo-details .repo-title h2 a:visited:hover {
+  text-decoration: underline;
+}
+
+.repositories .list-of-repos .single-repo .repo-details .repo-title span {
+  margin-left: 0.5em;
+  border: 1px solid #c8c2b7;
+  border-radius: 15px;
+  padding: 0.1em 0.4em;
+  font-size: 0.9em;
+}
+
+.repositories .list-of-repos .single-repo .repo-details .language {
+  text-transform: uppercase;
+  font-size: 0.9em;
+}
+
+.repositories .list-of-repos .single-repo .repo-details .language svg {
+  fill: #e34c26;
+}
+
+.repositories .list-of-repos .single-repo .repo-details .timeframe {
+  margin-left: 1em;
+  font-size: 0.9em;
+}
+
+.repositories .list-of-repos .single-repo .repo-starred .star {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #24292e;
+  padding: 0.4em 0.9em;
+  border-radius: 5px;
+  border: none;
+  border: 1px solid #c8c2b7;
+  background: #fafbfc;
+  font-size: 1em;
+  cursor: pointer;
+}
+
+.repositories .list-of-repos .single-repo .repo-starred .star:hover {
+  background: #f3f4f6;
+}
+
+.repositories .list-of-repos .single-repo .repo-starred .star span {
+  margin-left: 0.5em;
+  font-size: 0.9em;
+}
 /*# sourceMappingURL=styles.css.map */

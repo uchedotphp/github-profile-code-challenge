@@ -379,4 +379,29 @@
       }
     }
   }
+
+  .footer {
+    ul {
+      margin: .5em 3em;
+      padding: 3em 1.2em;
+      border-top: 1px #e1e4e8 solid;
+      font-size: .9em;
+      text-align: center;
+
+      li {
+        list-style: none;
+        display: inline-block;
+        padding: 0 .5em;
+        line-height: 1.5;
+        a {
+          color: blue;
+          text-decoration: none;
+          text-transform: capitalize;
+          &:hover {
+            text-decoration: underline;
+          }
+        }
+      }
+    }
+  }
 }

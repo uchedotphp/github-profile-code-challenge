@@ -91,3 +91,79 @@ header {
   // margin-top: 2.5em;
   margin: 0 auto 0;
 }
+
+.repositories {
+    .list-of-repos {
+    padding: 0 1.2em;
+    .single-repo {
+      display: grid;
+      grid-template-columns: auto auto;
+      align-items: center;
+      justify-content: space-between;
+      border-top: 1px #e1e4e8 solid;
+      padding: 2em 0;
+      .repo-details {
+        .repo-title {
+          padding-bottom: 1em;
+          h2 {
+            display: inline-block;
+            a:link,
+            a:visited {
+              color: #0366d6;
+              text-decoration: none;
+
+              &:hover {
+                text-decoration: underline;
+              }
+            }
+          }
+
+          span {
+            margin-left: 0.5em;
+            border: 1px solid $hover-color;
+            border-radius: 15px;
+            padding: 0.1em 0.4em;
+            font-size: 0.9em;
+          }
+        }
+
+        .language {
+          text-transform: uppercase;
+          font-size: 0.9em;
+
+          svg {
+            fill: #e34c26;
+          }
+        }
+
+        .timeframe {
+          margin-left: 1em;
+          font-size: 0.9em;
+        }
+      }
+
+      .repo-starred {
+        .star {
+          @include flexCenter;
+          color: $base-black-background;
+          padding: 0.4em 0.9em;
+          border-radius: 5px;
+          border: none;
+          border: 1px solid $hover-color;
+          background: #fafbfc;
+          font-size: 1em;
+          cursor: pointer;
+
+          &:hover {
+            background: #f3f4f6;
+          }
+
+          span {
+            margin-left: 0.5em;
+            font-size: 0.9em;
+          }
+        }
+      }
+    }
+  }
+}

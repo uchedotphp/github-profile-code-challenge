@@ -298,5 +298,116 @@
         grid-template-columns: 22% auto;
     grid-column-gap: 2em;
   }
+  main .content-nav {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 26% auto;
+        grid-template-columns: 26% auto;
+  }
+  main .repos .repositories .search-repo {
+    padding: 1em 1.2em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .repos .repositories .search-repo input {
+    margin-right: 2em;
+    -webkit-box-flex: 8;
+        -ms-flex-positive: 8;
+            flex-grow: 8;
+    padding: 0.5em 0.5em;
+    border-radius: 5px;
+    border: 1px solid #c8c2b7;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding-left: 1em;
+  }
+  main .repos .repositories .search-repo .search-repo-buttons {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+  }
+  main .repos .repositories .search-repo .search-repo-buttons div {
+    margin-right: 1em;
+  }
+  main .repos .repositories .search-repo .search-repo-buttons div .button-white {
+    background: #fafbfc;
+    padding: 0.5em 1em;
+    border: 1px solid #c8c2b7;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #24292e;
+    margin-right: 0.5em;
+    cursor: pointer;
+  }
+  main .repos .repositories .search-repo .search-repo-buttons div .button-white:hover {
+    background: #f3f4f6;
+  }
+  main .repos .repositories .search-repo .search-repo-buttons .button-green {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    border: none;
+    background: #2ea44f;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  main .repos .repositories .search-repo .search-repo-buttons .button-green:hover {
+    background: #2c974b;
+  }
+  main .repos .repositories .search-repo .search-repo-buttons .button-green svg {
+    fill: #fff;
+  }
+  main .repos .repositories .search-repo .search-repo-buttons .button-green span {
+    margin-left: 0.5em;
+  }
+  .footer {
+    margin: 0.5em 3em;
+  }
+  .footer ul {
+    margin: 0 auto;
+    max-width: 1280px;
+    padding: 3em 1.2em;
+    border-top: 1px #e1e4e8 solid;
+    font-size: 0.9em;
+    text-align: center;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .footer ul li {
+    list-style: none;
+    padding: 0 0.5em;
+  }
+  .footer ul li a {
+    color: blue;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+  .footer ul li a:hover {
+    text-decoration: underline;
+  }
+  .footer ul li a svg {
+    fill: #c8c2b7;
+  }
+  .footer ul li a svg:hover {
+    fill: #586069;
+  }
 }
 /*# sourceMappingURL=larger-screen-styles.css.map */

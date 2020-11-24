@@ -283,5 +283,96 @@
       grid-template-columns: 22% auto;
       grid-column-gap: 2em;
     }
+
+    .content-nav {
+      display: grid;
+      grid-template-columns: 26% auto;
+      //  grid-column-gap: 2em;
+    }
+
+    .repos {
+      .repositories {
+        .search-repo {
+          // margin: 1em 0;
+          // padding: 1em 1.2em;
+          // background: red;
+          padding: 1em 1.2em;
+          display: flex;
+          align-items: center;
+          // justify-content: space-between;
+          // display: inline-block;
+
+          input {
+            // max-width: 50%;
+            // background-color: green;
+            margin-right: 2em;
+            flex-grow: 8;
+            padding: 0.5em 0.5em;
+            border-radius: 5px;
+            border: 1px solid $hover-color;
+            align-self: center;
+            padding-left: 1em;
+          }
+
+          ::placeholder {
+            // color: $hover-color;
+          }
+
+          .search-repo-buttons {
+            // margin-right: auto;
+            // display: inline-block;
+            display: flex;
+            // align-items: center;
+            // justify-content: space-between;
+            div {
+              margin-right: 1em;
+              .button-white {
+                @include button(#fafbfc, #f3f4f6);
+              }
+            }
+            .button-green {
+              @include icon-button(#2ea44f, #2c974b);
+            }
+          }
+        }
+      }
+    }
+  }
+
+  .footer {
+    margin: 0.5em 3em;
+    ul {
+      margin: 0 auto;
+      max-width: 1280px;
+      padding: 3em 1.2em;
+      border-top: 1px #e1e4e8 solid;
+      font-size: 0.9em;
+      text-align: center;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+
+      li {
+        list-style: none;
+        // display: ;
+        padding: 0 0.5em;
+        a {
+          color: blue;
+          text-decoration: none;
+          text-transform: capitalize;
+          &:hover {
+            text-decoration: underline;
+          }
+
+          svg {
+            fill: $hover-color;
+
+            &:hover {
+              fill: $faded-text-black;
+            }
+          }
+        }
+      }
+    }
   }
 }

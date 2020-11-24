@@ -413,5 +413,26 @@
     margin-left: 0.5em;
     font-size: 0.9em;
   }
+  .footer ul {
+    margin: .5em 3em;
+    padding: 3em 1.2em;
+    border-top: 1px #e1e4e8 solid;
+    font-size: .9em;
+    text-align: center;
+  }
+  .footer ul li {
+    list-style: none;
+    display: inline-block;
+    padding: 0 .5em;
+    line-height: 1.5;
+  }
+  .footer ul li a {
+    color: blue;
+    text-decoration: none;
+    text-transform: capitalize;
+  }
+  .footer ul li a:hover {
+    text-decoration: underline;
+  }
 }
 /*# sourceMappingURL=mobile-styles.css.map */
