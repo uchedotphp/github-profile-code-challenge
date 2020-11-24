@@ -227,6 +227,7 @@
     }
 
     .repos {
+        // mobile navigation
       .navigation-mobile {
         background: #fff;
         border-bottom: 1px #e1e4e8 solid;
@@ -267,6 +268,40 @@
             }
           }
         }
+      }
+
+      .repositories {
+          .search-repo {
+        margin: 1em 0;
+        // padding: 1em 1.2em;
+        padding: 0 1.2em;
+
+        input {
+          width: 100%;
+          padding: 0.5em 0.5em;
+          border-radius: 5px;
+          border: 1px solid $hover-color;
+          align-self: center;
+          padding-left: 1em;
+        }
+
+        ::placeholder {
+          // color: $hover-color;
+        }
+        .search-repo-buttons {
+          margin-top: 1em;
+          display: flex;
+          justify-content: space-between;
+          div {
+            .button-white {
+              @include button(#fafbfc, #f3f4f6);
+            }
+          }
+          .button-green {
+            @include icon-button(#2ea44f, #2c974b);
+          }
+        }
+      }
       }
     }
   }

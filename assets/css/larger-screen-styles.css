@@ -21,7 +21,8 @@
 @media only screen and (min-width: 768px) {
   .display-top-mobile-drawer,
   .top-header,
-  .hold-the-drawer-abeg {
+  .hold-the-drawer-abeg,
+  .navigation-mobile {
     display: none;
   }
   .top-header-desktop {
@@ -289,6 +290,13 @@
   }
   main .main-content .bio-area .contact .following a:link:nth-last-child() {
     margin-right: 0;
+  }
+  main .content {
+    display: -ms-grid;
+    display: grid;
+    -ms-grid-columns: 22% auto;
+        grid-template-columns: 22% auto;
+    grid-column-gap: 2em;
   }
 }
 /*# sourceMappingURL=larger-screen-styles.css.map */

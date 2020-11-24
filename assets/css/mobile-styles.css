@@ -280,5 +280,65 @@
     fill: #959da5;
     margin-right: 0.5em;
   }
+  .main-content .repos .repositories .search-repo {
+    margin: 1em 0;
+    padding: 0 1.2em;
+  }
+  .main-content .repos .repositories .search-repo input {
+    width: 100%;
+    padding: 0.5em 0.5em;
+    border-radius: 5px;
+    border: 1px solid #c8c2b7;
+    -ms-flex-item-align: center;
+        -ms-grid-row-align: center;
+        align-self: center;
+    padding-left: 1em;
+  }
+  .main-content .repos .repositories .search-repo .search-repo-buttons {
+    margin-top: 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+  }
+  .main-content .repos .repositories .search-repo .search-repo-buttons div .button-white {
+    background: #fafbfc;
+    padding: 0.5em 1em;
+    border: 1px solid #c8c2b7;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #24292e;
+    margin-right: 0.5em;
+    cursor: pointer;
+  }
+  .main-content .repos .repositories .search-repo .search-repo-buttons div .button-white:hover {
+    background: #f3f4f6;
+  }
+  .main-content .repos .repositories .search-repo .search-repo-buttons .button-green {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+    padding: 0.5em 1em;
+    border-radius: 5px;
+    border: none;
+    background: #2ea44f;
+    color: #fff;
+    font-size: 1em;
+    cursor: pointer;
+  }
+  .main-content .repos .repositories .search-repo .search-repo-buttons .button-green:hover {
+    background: #2c974b;
+  }
+  .main-content .repos .repositories .search-repo .search-repo-buttons .button-green svg {
+    fill: #fff;
+  }
+  .main-content .repos .repositories .search-repo .search-repo-buttons .button-green span {
+    margin-left: 0.5em;
+  }
 }
 /*# sourceMappingURL=mobile-styles.css.map */

@@ -10,3 +10,49 @@
   display: flex;
   align-items: center;
 }
+
+@mixin button($bg, $bg-hover-color) {
+  background: $bg;
+  padding: 0.5em 1em;
+  border: 1px solid $hover-color;
+  border-radius: 5px;
+  font-size: 1em;
+  color: $base-black-background;
+  margin-right: 0.5em;
+  cursor: pointer;
+
+  &:hover {
+    background: $bg-hover-color;
+  }
+}
+
+@mixin icon-button($bg, $bg-hover-color) {
+  @include flexCenter;
+  padding: 0.5em 1em;
+  border-radius: 5px;
+  border: none;
+  background: $bg;
+  color: #fff;
+  font-size: 1em;
+  cursor: pointer;
+
+  &:hover {
+    background: $bg-hover-color;
+  }
+
+  svg {
+    fill: #fff;
+  }
+
+  span {
+    margin-left: 0.5em;
+  }
+}
+
+@mixin language($language) {
+  @if ($language == "html") {
+    svg {
+      fill: red;
+    }
+  }
+}
