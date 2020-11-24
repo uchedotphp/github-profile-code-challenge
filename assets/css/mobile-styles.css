@@ -238,5 +238,47 @@
   .main-content .contact .following a:nth-last-child() {
     margin-right: 0;
   }
+  .main-content .repos .navigation-mobile {
+    background: #fff;
+    border-bottom: 1px #e1e4e8 solid;
+  }
+  .main-content .repos .navigation-mobile .links-mobile {
+    padding: 0 1.5em;
+    margin-top: 1em;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    overflow-x: auto;
+    text-transform: capitalize;
+  }
+  .main-content .repos .navigation-mobile .links-mobile a span {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  .main-content .repos .navigation-mobile .links-mobile a span .repo-number {
+    margin-left: 0.5em;
+    background: #e8eaec;
+    padding: 0.1em 0.5em;
+    border-radius: 50%;
+    display: inline-block;
+    font-size: 0.9em;
+  }
+  .main-content .repos .navigation-mobile .links-mobile a {
+    color: #24292e;
+    display: block;
+    text-decoration: none;
+    padding: 0 1em 1em;
+  }
+  .main-content .repos .navigation-mobile .links-mobile a:hover {
+    border-bottom: 2px solid #c8c2b7;
+  }
+  .main-content .repos .navigation-mobile .links-mobile a svg {
+    fill: #959da5;
+    margin-right: 0.5em;
+  }
 }
 /*# sourceMappingURL=mobile-styles.css.map */

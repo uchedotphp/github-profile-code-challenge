@@ -157,5 +157,138 @@
     fill: #959da5;
     margin-right: 0.5em;
   }
+  main .main-content .bio-area {
+    margin-top: -2.44em;
+  }
+  main .main-content .bio-area .bio-status {
+    display: -ms-grid;
+    display: grid;
+  }
+  main .main-content .bio-area .bio-status img {
+    cursor: pointer;
+    margin-bottom: 1em;
+  }
+  main .main-content .bio-area .bio-status .name b {
+    font-size: 2em;
+    display: block;
+    color: #24292e;
+  }
+  main .main-content .bio-area .bio-status .name span {
+    font-size: 1.5em;
+  }
+  main .main-content .bio-area .status {
+    display: block;
+    position: relative;
+    text-decoration: none;
+  }
+  main .main-content .bio-area .status .float-stat {
+    position: absolute;
+    top: -165px;
+    right: -8.9em;
+    padding: 0.5em 0.7em;
+    background: #fff;
+    border-radius: 100px;
+  }
+  main .main-content .bio-area .status .float-stat .status-text {
+    margin-left: 0.5em;
+    text-transform: capitalize;
+    font-size: 1em;
+  }
+  main .main-content .bio-area .bio-text {
+    margin-top: 1em;
+    color: #24292e;
+    font-size: 1.19em;
+  }
+  main .main-content .bio-area .button {
+    display: block;
+    width: 100%;
+    background: #fafbfc;
+    padding: 0.5em 0;
+    border: 1px solid #c8c2b7;
+    border-radius: 5px;
+    font-size: 1em;
+    color: #24292e;
+    margin: 1.5em 0;
+    cursor: pointer;
+  }
+  main .main-content .bio-area .button:hover {
+    background: #f3f4f6;
+  }
+  main .main-content .bio-area .contact {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  main .main-content .bio-area .contact .email > span {
+    margin-bottom: 0.5em;
+  }
+  main .main-content .bio-area .contact .email {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+    -webkit-box-ordinal-group: 3;
+        -ms-flex-order: 2;
+            order: 2;
+    margin-top: 1.5em;
+  }
+  main .main-content .bio-area .contact .email .social {
+    color: #24292e;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .main-content .bio-area .contact .email .social svg {
+    fill: #586069;
+    margin-right: 0.5em;
+  }
+  main .main-content .bio-area .contact .email .social a {
+    text-decoration: none;
+    color: #24292e;
+  }
+  main .main-content .bio-area .contact .email .social a:hover {
+    text-decoration: underline;
+    color: blue;
+  }
+  main .main-content .bio-area .contact .following {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-ordinal-group: 2;
+        -ms-flex-order: 1;
+            order: 1;
+  }
+  main .main-content .bio-area .contact .following a {
+    margin-right: 0.5em;
+    text-decoration: none;
+    color: #24292e;
+  }
+  main .main-content .bio-area .contact .following a:hover {
+    color: blue;
+  }
+  main .main-content .bio-area .contact .following a:link:nth-child(odd) {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-align: center;
+        -ms-flex-align: center;
+            align-items: center;
+  }
+  main .main-content .bio-area .contact .following a:link:nth-child(odd) svg {
+    margin-right: 0.5em;
+  }
+  main .main-content .bio-area .contact .following a:link:nth-last-child() {
+    margin-right: 0;
+  }
 }
 /*# sourceMappingURL=larger-screen-styles.css.map */

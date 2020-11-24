@@ -225,5 +225,49 @@
         margin-right: 0;
       }
     }
+
+    .repos {
+      .navigation-mobile {
+        background: #fff;
+        border-bottom: 1px #e1e4e8 solid;
+        .links-mobile {
+          padding: 0 1.5em;
+          margin-top: 1em;
+          display: flex;
+          overflow-x: auto;
+          text-transform: capitalize;
+          a {
+            span {
+              @include flexCenter;
+
+              .repo-number {
+                margin-left: 0.5em;
+                background: #e8eaec;
+                padding: 0.1em 0.5em;
+                border-radius: 50%;
+                display: inline-block;
+                font-size: 0.9em;
+              }
+            }
+          }
+
+          a {
+            color: $base-black-background;
+            display: block;
+            text-decoration: none;
+            padding: 0 1em 1em;
+
+            &:hover {
+              border-bottom: 2px solid $hover-color;
+            }
+
+            svg {
+              fill: $svg-colors;
+              margin-right: 0.5em;
+            }
+          }
+        }
+      }
+    }
   }
 }

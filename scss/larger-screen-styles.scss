@@ -152,7 +152,131 @@
 
     // main content
     .main-content {
-      
+      .bio-area {
+        margin-top: -2.44em;
+        .bio-status {
+          display: grid;
+          img {
+            cursor: pointer;
+            // margin: 0 auto 1em;
+            margin-bottom: 1em;
+          }
+
+          .name {
+            b {
+              font-size: 2em;
+              display: block;
+              color: $base-black-background;
+            }
+
+            span {
+              font-size: 1.5em;
+            }
+          }
+        }
+
+        .status {
+          display: block;
+          position: relative;
+          text-decoration: none;
+
+          .float-stat {
+            position: absolute;
+            top: -165px;
+            right: -8.9em;
+            padding: 0.5em 0.7em;
+            background: #fff;
+            border-radius: 100px;
+            .status-text {
+              // visibility: hidden;
+              margin-left: 0.5em;
+              text-transform: capitalize;
+              font-size: 1em;
+            }
+          }
+        }
+
+        .bio-text {
+          margin-top: 1em;
+          color: $base-black-background;
+          font-size: 1.19em;
+        }
+
+        .button {
+          display: block;
+          width: 100%;
+          background: #fafbfc;
+          padding: 0.5em 0;
+          border: 1px solid $hover-color;
+          border-radius: 5px;
+          font-size: 1em;
+          color: $base-black-background;
+          margin: 1.5em 0;
+          cursor: pointer;
+
+          &:hover {
+            background: #f3f4f6;
+          }
+        }
+
+        .contact {
+          display: flex;
+          flex-direction: column;
+
+          .email > span {
+            margin-bottom: 0.5em;
+          }
+          .email {
+            display: flex;
+            flex-direction: column;
+            order: 2;
+            margin-top: 1.5em;
+            .social {
+              color: $base-black-background;
+              display: flex;
+              align-items: center;
+              svg {
+                fill: $faded-text-black;
+                margin-right: 0.5em;
+              }
+              a {
+                text-decoration: none;
+                color: $base-black-background;
+                &:hover {
+                  text-decoration: underline;
+                  color: blue;
+                }
+              }
+            }
+          }
+
+          .following {
+            display: flex;
+            order: 1;
+            a {
+              margin-right: 0.5em;
+              text-decoration: none;
+              color: $base-black-background;
+
+              &:hover {
+                color: blue;
+              }
+            }
+          }
+          .following a:link:nth-child(odd) {
+            @include flexCenter;
+            svg {
+              margin-right: 0.5em;
+            }
+          }
+
+          .following a:link:nth-last-child() {
+            margin-right: 0;
+          }
+        }
+      }
     }
+
+    
   }
 }
