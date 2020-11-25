@@ -13,7 +13,20 @@ const navigation = {
         drawer.classList.add("hide");
       }
     });
-  }
+  },
+
+  mobileNav() {
+    const mobileNavbar = document.getElementById("mobileNavbar");
+    const sticky = mobileNavbar.offsetTop;
+    window.onscroll = function () {
+      if (window.pageYOffset >= sticky) {
+        mobileNavbar.classList.add("sticky");
+      } else {
+        mobileNavbar.classList.remove("sticky");
+      }
+    };
+  },
 };
 
 navigation.openBurgerMenuDrawer();
+navigation.mobileNav();

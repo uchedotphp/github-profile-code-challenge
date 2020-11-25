@@ -48,6 +48,12 @@
     display: none !important;
   }
 
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+
   // header-tag styles
   .hold-the-drawer-abeg {
     position: relative;

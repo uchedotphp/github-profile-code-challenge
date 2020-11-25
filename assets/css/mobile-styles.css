@@ -60,6 +60,11 @@
   .navigation-desktop {
     display: none !important;
   }
+  .sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
   .hold-the-drawer-abeg {
     position: relative;
     -webkit-transition-property: border-radius, background-color;

@@ -183,6 +183,7 @@
     text-decoration: none;
   }
   main .main-content .bio-area .status .float-stat {
+    border: 1px solid #e1e4e8;
     position: absolute;
     top: -165px;
     right: -8.9em;
@@ -191,6 +192,7 @@
     border-radius: 100px;
   }
   main .main-content .bio-area .status .float-stat .status-text {
+    color: #24292e;
     margin-left: 0.5em;
     text-transform: capitalize;
     font-size: 1em;
