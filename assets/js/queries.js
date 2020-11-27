@@ -1,5 +1,5 @@
 const graphQl = {
-  development_env: 'production', //change this value to 'production' when pushing to netlify
+  development_env: window.location.protocol,
 
   queries() {
     const username = "uchedotphp";
@@ -79,10 +79,10 @@ const graphQl = {
         // Authorization: `bearer ${
         //   github_secret == undefined ? process.env.github_secret : github_secret
         // }`,
-        
+
         Authorization: `bearer ${
-          this.development_env == 'development' ?
-            github_secret
+          this.development_env == "http:"
+            ? github_secret
             : process.env.github_secret
         }`,
         // Authorization: `bearer ${process.env.github_secret || github_secret}`,
