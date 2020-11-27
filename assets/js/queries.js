@@ -1,4 +1,6 @@
 const graphQl = {
+  development_env: 'development', //change this value to 'production' when pushing to netlify
+
   queries() {
     const username = "uchedotphp";
     const gitHubGraphQLAPI = (username) =>
@@ -74,7 +76,16 @@ const graphQl = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        Authorization: `bearer ${github_secret || process.env.github_secret}`,
+        // Authorization: `bearer ${
+        //   github_secret == undefined ? process.env.github_secret : github_secret
+        // }`,
+        
+        Authorization: `bearer ${
+          this.development_env == 'development' ?
+            github_secret
+            : process.env.github_secret
+        }`,
+        // Authorization: `bearer ${process.env.github_secret || github_secret}`,
         // Authorization: `bearer ${process.env.GITHUB_SECRET}`
       },
       body: JSON.stringify({ query: gitHubGraphQLAPI(username) }),
