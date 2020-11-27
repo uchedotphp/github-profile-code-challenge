@@ -1,5 +1,5 @@
 const graphQl = {
-  development_env: 'development', //change this value to 'production' when pushing to netlify
+  development_env: 'production', //change this value to 'production' when pushing to netlify
 
   queries() {
     const username = "uchedotphp";
