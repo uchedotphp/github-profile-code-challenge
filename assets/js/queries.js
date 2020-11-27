@@ -74,8 +74,7 @@ const graphQl = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        // Authorization: `bearer 9afdfce3e7cc8da17194fa975e60d5bc5fa83359`,
-        Authorization: `bearer ${github_secret}`,
+        Authorization: `bearer ${github_secret || process.env.GITHUB_SECRET}`,
         // Authorization: `bearer ${process.env.GITHUB_SECRET}`
       },
       body: JSON.stringify({ query: gitHubGraphQLAPI(username) }),
