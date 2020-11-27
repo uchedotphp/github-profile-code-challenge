@@ -117,8 +117,8 @@ header input {
 .repositories .list-of-repos .single-repo {
   display: -ms-grid;
   display: grid;
-  -ms-grid-columns: auto auto;
-      grid-template-columns: auto auto;
+  -ms-grid-columns: 70% auto;
+      grid-template-columns: 70% auto;
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
@@ -137,14 +137,12 @@ header input {
   display: inline-block;
 }
 
-.repositories .list-of-repos .single-repo .repo-details .repo-title h2 a:link,
-.repositories .list-of-repos .single-repo .repo-details .repo-title h2 a:visited {
+.repositories .list-of-repos .single-repo .repo-details .repo-title h2 a {
   color: #0366d6;
   text-decoration: none;
 }
 
-.repositories .list-of-repos .single-repo .repo-details .repo-title h2 a:link:hover,
-.repositories .list-of-repos .single-repo .repo-details .repo-title h2 a:visited:hover {
+.repositories .list-of-repos .single-repo .repo-details .repo-title h2 a:hover {
   text-decoration: underline;
 }
 
@@ -156,17 +154,60 @@ header input {
   font-size: 0.9em;
 }
 
-.repositories .list-of-repos .single-repo .repo-details .language {
-  text-transform: uppercase;
-  font-size: 0.9em;
+.repositories .list-of-repos .single-repo .repo-details .repo-title p {
+  padding: .5em 0 0;
 }
 
-.repositories .list-of-repos .single-repo .repo-details .language svg {
-  fill: #e34c26;
+.repositories .list-of-repos .single-repo .repo-details .repo-title p small {
+  padding: 0 0 .5em;
+}
+
+.repositories .list-of-repos .single-repo .repo-details .language {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.repositories .list-of-repos .single-repo .repo-details .language a {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  color: #586069;
+  text-decoration: none;
+}
+
+.repositories .list-of-repos .single-repo .repo-details .language a:hover {
+  color: blue;
+}
+
+.repositories .list-of-repos .single-repo .repo-details .language a span {
+  font-size: .9em;
+}
+
+.repositories .list-of-repos .single-repo .repo-details .language .license {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.repositories .list-of-repos .single-repo .repo-details .language span span {
+  font-size: .9em;
+}
+
+.repositories .list-of-repos .single-repo .repo-details .language > * {
+  margin-right: 1.5em;
 }
 
 .repositories .list-of-repos .single-repo .repo-details .timeframe {
-  margin-left: 1em;
   font-size: 0.9em;
 }
 

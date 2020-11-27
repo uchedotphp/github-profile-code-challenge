@@ -384,15 +384,7 @@
     padding: 0.1em 0.4em;
     font-size: 0.9em;
   }
-  .main-content .repos .repositories .list-of-repos .single-repo .repo-details .language {
-    text-transform: uppercase;
-    font-size: 0.9em;
-  }
-  .main-content .repos .repositories .list-of-repos .single-repo .repo-details .language svg {
-    fill: #e34c26;
-  }
   .main-content .repos .repositories .list-of-repos .single-repo .repo-details .timeframe {
-    margin-left: 1em;
     font-size: 0.9em;
   }
   .main-content .repos .repositories .list-of-repos .single-repo .repo-starred .star {

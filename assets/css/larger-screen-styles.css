@@ -110,7 +110,7 @@
     background: #fff;
     border-bottom: 1px #e1e4e8 solid;
   }
-  main .navigation-desktop .main-nav div .col-4 {
+  main .navigation-desktop .main-nav div .col-3 {
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -118,7 +118,7 @@
         -ms-flex-align: center;
             align-items: center;
   }
-  main .navigation-desktop .main-nav div .col-4 b {
+  main .navigation-desktop .main-nav div .col-3 b {
     margin-left: 0.5em;
   }
   main .navigation-desktop .main-nav div .main-nav-links .links {

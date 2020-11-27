@@ -97,7 +97,7 @@ header {
     padding: 0 1.2em;
     .single-repo {
       display: grid;
-      grid-template-columns: auto auto;
+      grid-template-columns: 70% auto;
       align-items: center;
       justify-content: space-between;
       border-top: 1px #e1e4e8 solid;
@@ -107,8 +107,7 @@ header {
           padding-bottom: 1em;
           h2 {
             display: inline-block;
-            a:link,
-            a:visited {
+            a {
               color: #0366d6;
               text-decoration: none;
 
@@ -125,19 +124,54 @@ header {
             padding: 0.1em 0.4em;
             font-size: 0.9em;
           }
-        }
 
-        .language {
-          text-transform: uppercase;
-          font-size: 0.9em;
-
-          svg {
-            fill: #e34c26;
+          p {
+            padding: .5em 0 0;
+            small {
+              padding: 0 0 .5em;
+            }
           }
         }
 
+        .language {
+          display: flex;
+          align-items: center;
+
+          a {
+            display: flex;
+            align-items: center;
+            color: $faded-text-black;
+            text-decoration: none;
+            &:hover {
+              color: blue;
+            }
+            span {
+              // color: green;
+              font-size: .9em;
+            }
+          }
+          .license {
+            display: flex;
+            align-items: center;
+          }
+
+          span{
+            span{
+              font-size: .9em;
+            }
+          }
+
+          svg {
+            // fill: #e34c26;
+          }
+        }
+
+        .language > * {
+          margin-right: 1.5em;
+        }
+
         .timeframe {
-          margin-left: 1em;
+          // margin-left: 1em;
           font-size: 0.9em;
         }
       }
