@@ -38,7 +38,7 @@ const graphQl = {
     starredRepositories {
       totalCount
     }
-    repositories(last: 20, orderBy: {field: UPDATED_AT, direction: ASC}) {
+    repositories(last: 35, orderBy: {field: UPDATED_AT, direction: ASC}) {
       totalCount
       nodes {
         description

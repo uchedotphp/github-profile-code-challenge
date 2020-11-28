@@ -2,8 +2,6 @@ const saveData = ({ data }) => {
   console.log(`here`, data.user);
 
   const profileImages = [...document.images]; //fetch all the images currently on the document
-
-
   
   //   for the navigation
   const navBioImage = (profileImages[2].src = `${data.user.avatarUrl}`);
@@ -43,6 +41,10 @@ const saveData = ({ data }) => {
   // repository data
   const repos = document.querySelector(".list-of-repos");
   data.user.repositories.nodes.forEach((element) => {
+    let createdDay = new Date(element.updatedAt)
+    let currentDay = new Date()
+    let diff =
+      Math.floor((currentDay.getTime() - createdDay.getTime()) / (1000 * 3600 * 24));
     repos.innerHTML += `
     <div class="single-repo">
   <div class="repo-details">
@@ -210,7 +212,13 @@ const saveData = ({ data }) => {
             </span>`
             : ""
         }
-      <span class="timeframe">Updated 6 days ago</span>
+      <span class="timeframe">Updated ${
+        console.log(diff),
+        diff >
+        moment(element.updatedAt.substring(0, 7), "YYYY-MM").daysInMonth()
+          ? `on ${moment(element.updatedAt).format("D MMM")}`
+          : `${moment(element.updatedAt).toNow(true)} ago`
+      }</span>
     </div>
   </div>
   <div class="repo-starred">
