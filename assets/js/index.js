@@ -33,7 +33,7 @@ const navigation = {
     const style = getComputedStyle(a);
     const img = document.getElementById("img");
     const name = document.getElementById("name");
-    const username = document.querySelector(".username");
+    const username = document.querySelector(".name");
     const vanish = name.offsetTop;
     const stickyDesktop = desktopNavbar.offsetTop;
     if (style.display != "none") {
@@ -44,7 +44,7 @@ const navigation = {
           desktopNavbar.classList.remove("stickyDesktop");
         }
 
-        if (window.pageYOffset >= vanish - 52) {
+        if (window.pageYOffset >= vanish + 80) {
           img.classList.remove("hideImage");
           username.classList.add("hideImage");
         } else {
@@ -53,8 +53,6 @@ const navigation = {
         }
       };
     }
-    console.log(`this user: ${username.innerHTML}`);
-    username.innerHTML = "chee";
   }
 };
 

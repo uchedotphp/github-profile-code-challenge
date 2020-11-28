@@ -102,12 +102,21 @@
   .top-header-desktop .right-side .spaced > :nth-child(2) {
     margin-left: 0.2em;
   }
+  .hideImage {
+    visibility: hidden;
+  }
+  .stickyDesktop {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
   main {
     margin-top: 2em;
   }
   main .navigation-desktop {
     display: block;
     background: #fff;
+    z-index: 9;
     border-bottom: 1px #e1e4e8 solid;
   }
   main .navigation-desktop .main-nav div .col-3 {
@@ -158,6 +167,9 @@
     fill: #959da5;
     margin-right: 0.5em;
   }
+  main .main-content {
+    position: relative;
+  }
   main .main-content .bio-area {
     margin-top: -2.44em;
   }
@@ -179,23 +191,30 @@
   }
   main .main-content .bio-area .status {
     display: block;
-    position: relative;
     text-decoration: none;
+    position: absolute;
+    top: 11.5em;
+    left: 15.5em;
   }
   main .main-content .bio-area .status .float-stat {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
     border: 1px solid #e1e4e8;
-    position: absolute;
-    top: -165px;
-    right: -8.9em;
-    padding: 0.5em 0.7em;
+    padding: 0.6em;
     background: #fff;
     border-radius: 100px;
   }
   main .main-content .bio-area .status .float-stat .status-text {
     color: #24292e;
-    margin-left: 0.5em;
+    display: none;
     text-transform: capitalize;
     font-size: 1em;
+  }
+  main .main-content .bio-area .status .float-stat:hover .status-text {
+    display: block;
+    padding-left: 0.5em;
+    color: blue;
   }
   main .main-content .bio-area .bio-text {
     margin-top: 1em;

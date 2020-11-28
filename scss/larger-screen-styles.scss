@@ -90,6 +90,16 @@
   }
 
   //   styles for the main-tag content
+  .hideImage {
+    visibility: hidden;
+  }
+
+  .stickyDesktop {
+    position: fixed;
+    top: 0;
+    width: 100%;
+  }
+  
   main {
     margin-top: 2em;
 
@@ -97,6 +107,7 @@
     .navigation-desktop {
       display: block;
       background: #fff;
+      z-index: 9;
       border-bottom: 1px #e1e4e8 solid;
       .main-nav {
         div {
@@ -153,8 +164,10 @@
 
     // main content
     .main-content {
+      position: relative;
       .bio-area {
         margin-top: -2.44em;
+
         .bio-status {
           display: grid;
           img {
@@ -178,23 +191,31 @@
 
         .status {
           display: block;
-          position: relative;
+
           text-decoration: none;
+          position: absolute;
+          top: 11.5em;
+          left: 15.5em;
 
           .float-stat {
+            display: flex;
             border: 1px solid #e1e4e8;
-            position: absolute;
-            top: -165px;
-            right: -8.9em;
-            padding: 0.5em 0.7em;
+            padding: 0.6em;
             background: #fff;
             border-radius: 100px;
             .status-text {
               color: $base-black-background;
-              // visibility: hidden;
-              margin-left: 0.5em;
+              display: none;
               text-transform: capitalize;
               font-size: 1em;
+            }
+
+            &:hover {
+              .status-text {
+                display: block;
+                padding-left: 0.5em;
+                color: blue;
+              }
             }
           }
         }

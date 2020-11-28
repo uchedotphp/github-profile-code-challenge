@@ -1,34 +1,29 @@
 const saveData = ({ data }) => {
-  console.log(`here`, data.user);
-
   const profileImages = [...document.images]; //fetch all the images currently on the document
-  
+
   //   for the navigation
   const navBioImage = (profileImages[2].src = `${data.user.avatarUrl}`);
   const navNode = (document.getElementById("img").children[1].innerHTML =
     data.user.login);
 
-    const countsRepos = [...document.querySelectorAll('.ripper')]
-    if (data.user.repositories.totalCount) {
-      countsRepos.forEach((element) => {
-        const repoCount = document.createElement("span");
-        repoCount.className = "repo-number";
-        repoCount.innerHTML = data.user.repositories.totalCount;
-        element.appendChild(repoCount);
-      });
-    }
-    const countsProjects = [...document.querySelectorAll(".projecter")];
-    if (data.user.projects.totalCount) {
-      countsProjects.forEach((element) => {
-        const repoCount = document.createElement("span");
-        repoCount.className = "repo-number";
-        repoCount.innerHTML = data.user.projects.totalCount;
-        element.appendChild(repoCount);
-      });
-    }
-
-
-
+  const countsRepos = [...document.querySelectorAll(".ripper")];
+  if (data.user.repositories.totalCount) {
+    countsRepos.forEach((element) => {
+      const repoCount = document.createElement("span");
+      repoCount.className = "repo-number";
+      repoCount.innerHTML = data.user.repositories.totalCount;
+      element.appendChild(repoCount);
+    });
+  }
+  const countsProjects = [...document.querySelectorAll(".projecter")];
+  if (data.user.projects.totalCount) {
+    countsProjects.forEach((element) => {
+      const repoCount = document.createElement("span");
+      repoCount.className = "repo-number";
+      repoCount.innerHTML = data.user.projects.totalCount;
+      element.appendChild(repoCount);
+    });
+  }
 
   //   for the aside bio
   const asideBioImage = (profileImages[3].src = `${data.user.avatarUrl}`);
@@ -58,15 +53,14 @@ const saveData = ({ data }) => {
   const starred = (followingSection.children[2].children[1].innerHTML =
     data.user.starredRepositories.totalCount);
 
-
-
   // repository data
   const repos = document.querySelector(".list-of-repos");
-  data.user.repositories.nodes.forEach((element) => {
-    let createdDay = new Date(element.updatedAt)
-    let currentDay = new Date()
-    let diff =
-      Math.floor((currentDay.getTime() - createdDay.getTime()) / (1000 * 3600 * 24));
+  data.user.repositories.nodes.reverse().forEach((element) => {
+    let createdDay = new Date(element.updatedAt);
+    let currentDay = new Date();
+    let diff = Math.floor(
+      (currentDay.getTime() - createdDay.getTime()) / (1000 * 3600 * 24)
+    );
     repos.innerHTML += `
     <div class="single-repo">
   <div class="repo-details">
@@ -92,8 +86,8 @@ const saveData = ({ data }) => {
                   element.languages.nodes[0].name == "HTML"
                     ? `
                 <svg
-          width="12"
-          height="12"
+          width="14"
+          height="14"
           xmlns="http://www.w3.org/2000/svg"
           class="ionicon"
           viewBox="0 0 512 512"
@@ -110,8 +104,8 @@ const saveData = ({ data }) => {
                   element.languages.nodes[0].name == "CSS"
                     ? `
                 <svg
-          width="12"
-          height="12"
+          width="14"
+          height="14"
           xmlns="http://www.w3.org/2000/svg"
           class="ionicon"
           viewBox="0 0 512 512"
@@ -128,8 +122,8 @@ const saveData = ({ data }) => {
                   element.languages.nodes[0].name == "SCSS"
                     ? `
                 <svg
-          width="12"
-          height="12"
+          width="14"
+          height="14"
           xmlns="http://www.w3.org/2000/svg"
           class="ionicon"
           viewBox="0 0 512 512"
@@ -146,8 +140,8 @@ const saveData = ({ data }) => {
                   element.languages.nodes[0].name == "Dart"
                     ? `
                 <svg
-          width="12"
-          height="12"
+          width="14"
+          height="14"
           xmlns="http://www.w3.org/2000/svg"
           class="ionicon"
           viewBox="0 0 512 512"
@@ -164,8 +158,8 @@ const saveData = ({ data }) => {
                   element.languages.nodes[0].name == "PHP"
                     ? `
                 <svg
-          width="12"
-          height="12"
+          width="14"
+          height="14"
           xmlns="http://www.w3.org/2000/svg"
           class="ionicon"
           viewBox="0 0 512 512"
@@ -182,8 +176,8 @@ const saveData = ({ data }) => {
                   element.languages.nodes[0].name == "JavaScript"
                     ? `
                 <svg
-          width="12"
-          height="12"
+          width="14"
+          height="14"
           xmlns="http://www.w3.org/2000/svg"
           class="ionicon"
           viewBox="0 0 512 512"
@@ -200,8 +194,8 @@ const saveData = ({ data }) => {
                   element.languages.nodes[0].name == "Vue"
                     ? `
                 <svg
-          width="12"
-          height="12"
+          width="14"
+          height="14"
           xmlns="http://www.w3.org/2000/svg"
           class="ionicon"
           viewBox="0 0 512 512"
@@ -234,8 +228,8 @@ const saveData = ({ data }) => {
             </span>`
             : ""
         }
-      <span class="timeframe">Updated ${
-        console.log(diff),
+      <span class="timeframe">Updated 
+      ${
         diff >
         moment(element.updatedAt.substring(0, 7), "YYYY-MM").daysInMonth()
           ? `on ${moment(element.updatedAt).format("D MMM")}`
