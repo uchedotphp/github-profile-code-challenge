@@ -8,11 +8,33 @@ const saveData = ({ data }) => {
   const navNode = (document.getElementById("img").children[1].innerHTML =
     data.user.login);
 
+    const countsRepos = [...document.querySelectorAll('.ripper')]
+    if (data.user.repositories.totalCount) {
+      countsRepos.forEach((element) => {
+        const repoCount = document.createElement("span");
+        repoCount.className = "repo-number";
+        repoCount.innerHTML = data.user.repositories.totalCount;
+        element.appendChild(repoCount);
+      });
+    }
+    const countsProjects = [...document.querySelectorAll(".projecter")];
+    if (data.user.projects.totalCount) {
+      countsProjects.forEach((element) => {
+        const repoCount = document.createElement("span");
+        repoCount.className = "repo-number";
+        repoCount.innerHTML = data.user.projects.totalCount;
+        element.appendChild(repoCount);
+      });
+    }
+
+
+
+
   //   for the aside bio
   const asideBioImage = (profileImages[3].src = `${data.user.avatarUrl}`);
   const statusNode = document.querySelector(".float-stat");
   const statusText = document.querySelector(".status-text");
-  const statusImage = document.createElement("div");
+  const statusImage = document.createElement("span");
   statusImage.innerHTML = `<g-emoji class="g-emoji" alias="earth_americas" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f30e.png">🌎</g-emoji>`;
   statusNode.insertBefore(statusImage, statusText);
   statusText.innerHTML = data.user.status.message;

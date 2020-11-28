@@ -26,7 +26,38 @@ const navigation = {
       }
     };
   },
+
+  desktopNav() {
+    const desktopNavbar = document.getElementById("desktopNavbar");
+    const a = document.querySelector(".navigation-desktop");
+    const style = getComputedStyle(a);
+    const img = document.getElementById("img");
+    const name = document.getElementById("name");
+    const username = document.querySelector(".username");
+    const vanish = name.offsetTop;
+    const stickyDesktop = desktopNavbar.offsetTop;
+    if (style.display != "none") {
+      window.onscroll = function () {
+        if (window.pageYOffset >= stickyDesktop) {
+          desktopNavbar.classList.add("stickyDesktop");
+        } else {
+          desktopNavbar.classList.remove("stickyDesktop");
+        }
+
+        if (window.pageYOffset >= vanish - 52) {
+          img.classList.remove("hideImage");
+          username.classList.add("hideImage");
+        } else {
+          img.classList.add("hideImage");
+          username.classList.remove("hideImage");
+        }
+      };
+    }
+    console.log(`this user: ${username.innerHTML}`);
+    username.innerHTML = "chee";
+  }
 };
 
 navigation.openBurgerMenuDrawer();
 navigation.mobileNav();
+navigation.desktopNav()

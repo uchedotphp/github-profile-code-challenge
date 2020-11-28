@@ -150,6 +150,7 @@
       @include flexCenter;
       text-decoration: none;
 
+
       .status-text {
         text-transform: capitalize;
         font-size: 0.9em;
@@ -201,6 +202,10 @@
             text-decoration: underline;
             color: blue;
           }
+        }
+
+        .social {
+          @include flexCenter;
         }
       }
 
