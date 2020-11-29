@@ -1,5 +1,4 @@
 "use strict";
-console.log(document.body.clientWidth);
 
 // for the navigation menus
 const navigation = {
@@ -20,7 +19,7 @@ const navigation = {
     const mobileNavbar = document.getElementById("mobileNavbar");
     const sticky = mobileNavbar.offsetTop;
     window.onscroll = function () {
-      if (window.pageYOffset >= sticky) {
+      if ((document.body.clientWidth <= 768) && window.pageYOffset >= sticky) {
         mobileNavbar.classList.add("sticky");
       } else {
         mobileNavbar.classList.remove("sticky");
@@ -39,7 +38,7 @@ const navigation = {
     const stickyDesktop = desktopNavbar.offsetTop;
     if (style.display != "none") {
       window.onscroll = function () {
-        if (window.pageYOffset >= stickyDesktop) {
+        if ((document.body.clientWidth > 768) && window.pageYOffset >= stickyDesktop) {
           desktopNavbar.classList.add("stickyDesktop");
         } else {
           desktopNavbar.classList.remove("stickyDesktop");
@@ -88,35 +87,32 @@ const navigation = {
     const openLanguages = document.getElementById("openLanguage");
     const showLanguages = document.getElementById("showLanguages");
 
-    // if (document.body.clientWidth > 768) {
-      openLanguages.addEventListener("click", () => {
-        if (document.body.clientWidth > 768) {
+    
+    openLanguages.addEventListener("click", () => {
+      if (document.body.clientWidth > 768) {
         showLanguages.classList.toggle("hide");
-        }
-      });
+      }
+    });
 
-      openLanguages.addEventListener("blur", () => {
-        showLanguages.classList.add("hide");
-      });
-    // }
+    openLanguages.addEventListener("blur", () => {
+      showLanguages.classList.add("hide");
+    });
   },
 
   openTypes() {
     const openTypes = document.getElementById("openTypes");
     const showTypes = document.getElementById("showTypes");
 
-    // if (document.body.clientWidth > 768) {
-      openTypes.addEventListener("click", () => {
-        if (document.body.clientWidth > 768) {
+    
+    openTypes.addEventListener("click", () => {
+      if (document.body.clientWidth > 768) {
         showTypes.classList.toggle("hide");
+      }
+    });
 
-        }
-      });
-
-      openTypes.addEventListener("blur", () => {
-        showTypes.classList.add("hide");
-      });
-    // }
+    openTypes.addEventListener("blur", () => {
+      showTypes.classList.add("hide");
+    });
   },
 
   modalLang() {
@@ -125,17 +121,16 @@ const navigation = {
     const closeBtn = document.querySelectorAll(".modal-content")[1].children[0]
       .children[1];
 
-    
-      btn.addEventListener("click", () => {
-        if (document.body.clientWidth <= 768) {
+    btn.addEventListener("click", () => {
+      if (document.body.clientWidth <= 768) {
         modalLang.style.display = "block";
-        }
-      });
-      window.onclick = function (e) {
-        if (e.target == modalLang) {
-          modalLang.style.display = "none";
-        }
-      };
+      }
+    });
+    window.onclick = function (e) {
+      if (e.target == modalLang) {
+        modalLang.style.display = "none";
+      }
+    };
 
     closeBtn.onclick = function () {
       modalLang.style.display = "none";
@@ -148,18 +143,16 @@ const navigation = {
     const closeBtn = document.querySelectorAll(".modal-content")[0].children[0]
       .children[1];
 
-    
-      btn.addEventListener("click", () => {
-        if (document.body.clientWidth <= 768) {
-          modalType.style.display = "block";
-
-        }
-      });
-      window.onclick = function (e) {
-        if (e.target == modalType) {
-          modalType.style.display = "none";
-        }
-      };
+    btn.addEventListener("click", () => {
+      if (document.body.clientWidth <= 768) {
+        modalType.style.display = "block";
+      }
+    });
+    window.onclick = function (e) {
+      if (e.target == modalType) {
+        modalType.style.display = "none";
+      }
+    };
 
     closeBtn.onclick = function () {
       modalType.style.display = "none";

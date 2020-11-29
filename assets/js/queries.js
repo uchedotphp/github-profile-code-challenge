@@ -1,5 +1,5 @@
 const graphQl = {
-  development_env: window.location.protocol,
+  // development_env: window.location.protocol,
 
   queries() {
     const username = "uchedotphp";
@@ -77,16 +77,12 @@ const graphQl = {
       headers: {
         "Content-Type": "application/json",
         // Authorization: `bearer ${
-        //   github_secret == undefined ? process.env.github_secret : github_secret
+        //   this.development_env == "http:"
+        //     ? github_secret
+        //     : process.env.github_secret
         // }`,
-
-        Authorization: `bearer ${
-          this.development_env == "http:"
-            ? github_secret
-            : process.env.github_secret
-        }`,
-        // Authorization: `bearer ${process.env.github_secret || github_secret}`,
-        // Authorization: `bearer ${process.env.GITHUB_SECRET}`
+        Authorization: `bearer ${github_secret}`,
+        // Authorization: `bearer ${process.env.github_secret || github_secret}`
       },
       body: JSON.stringify({ query: gitHubGraphQLAPI(username) }),
     };
