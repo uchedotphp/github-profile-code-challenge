@@ -22,8 +22,9 @@
   .display-top-mobile-drawer,
   .top-header,
   .hold-the-drawer-abeg,
-  .navigation-mobile {
-    display: none;
+  .navigation-mobile,
+  .modal {
+    display: none !important;
   }
   .top-header-desktop {
     display: -ms-grid;
@@ -518,9 +519,6 @@
   }
   .push-type {
     right: 19.5em;
-  }
-  .button-white:focus {
-    outline: none;
   }
   .not-visible {
     visibility: hidden;

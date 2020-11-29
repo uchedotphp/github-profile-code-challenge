@@ -1,4 +1,5 @@
 "use strict";
+console.log(document.body.clientWidth);
 
 // for the navigation menus
 const navigation = {
@@ -87,32 +88,90 @@ const navigation = {
     const openLanguages = document.getElementById("openLanguage");
     const showLanguages = document.getElementById("showLanguages");
 
-    openLanguages.addEventListener("click", () => {
-      showLanguages.classList.toggle("hide");
-    });
+    // if (document.body.clientWidth > 768) {
+      openLanguages.addEventListener("click", () => {
+        if (document.body.clientWidth > 768) {
+        showLanguages.classList.toggle("hide");
+        }
+      });
 
-    openLanguages.addEventListener("blur", () => {
-      showLanguages.classList.add("hide");
-    });
+      openLanguages.addEventListener("blur", () => {
+        showLanguages.classList.add("hide");
+      });
+    // }
   },
 
   openTypes() {
     const openTypes = document.getElementById("openTypes");
     const showTypes = document.getElementById("showTypes");
 
-    openTypes.addEventListener("click", () => {
-      showTypes.classList.toggle("hide");
-    });
+    // if (document.body.clientWidth > 768) {
+      openTypes.addEventListener("click", () => {
+        if (document.body.clientWidth > 768) {
+        showTypes.classList.toggle("hide");
 
-    openTypes.addEventListener("blur", () => {
-      showTypes.classList.add("hide");
-    });
+        }
+      });
+
+      openTypes.addEventListener("blur", () => {
+        showTypes.classList.add("hide");
+      });
+    // }
+  },
+
+  modalLang() {
+    const modalLang = document.getElementById("modalLang");
+    const btn = document.getElementById("openLanguage");
+    const closeBtn = document.querySelectorAll(".modal-content")[1].children[0]
+      .children[1];
+
+    
+      btn.addEventListener("click", () => {
+        if (document.body.clientWidth <= 768) {
+        modalLang.style.display = "block";
+        }
+      });
+      window.onclick = function (e) {
+        if (e.target == modalLang) {
+          modalLang.style.display = "none";
+        }
+      };
+
+    closeBtn.onclick = function () {
+      modalLang.style.display = "none";
+    };
+  },
+
+  modalType() {
+    const modalType = document.getElementById("modalType");
+    const btn = document.getElementById("openTypes");
+    const closeBtn = document.querySelectorAll(".modal-content")[0].children[0]
+      .children[1];
+
+    
+      btn.addEventListener("click", () => {
+        if (document.body.clientWidth <= 768) {
+          modalType.style.display = "block";
+
+        }
+      });
+      window.onclick = function (e) {
+        if (e.target == modalType) {
+          modalType.style.display = "none";
+        }
+      };
+
+    closeBtn.onclick = function () {
+      modalType.style.display = "none";
+    };
   },
 };
 navigation.openBurgerMenuDrawer();
 navigation.mobileNav();
-navigation.desktopNav()
-navigation.openLanguages()
-navigation.openTypes()
-navigation.openProfile()
-navigation.openProjects()
+navigation.desktopNav();
+navigation.openLanguages();
+navigation.openTypes();
+navigation.openProfile();
+navigation.openProjects();
+navigation.modalLang();
+navigation.modalType();

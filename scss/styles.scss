@@ -63,6 +63,15 @@ body {
   display: none;
 }
 
+// buttons
+.button-white:focus {
+    outline: none;
+  }
+
+  .button-green:focus {
+    outline: none;
+  }
+
 
 // header styles
 header {

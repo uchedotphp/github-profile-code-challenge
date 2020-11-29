@@ -418,6 +418,62 @@
     margin-left: 0.5em;
     font-size: 0.9em;
   }
+  .hide-dropdown-small {
+    display: none !important;
+  }
+  .modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    padding: 45% 1em 0;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: black;
+    background-color: rgba(0, 0, 0, 0.4);
+  }
+  .modal-content {
+    border-radius: 10px;
+    background: #fff;
+  }
+  .modal-content div {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 1.2em 1em;
+    border-bottom: 1px solid #e1e4e8;
+    color: #24292e;
+  }
+  .modal-content div button {
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  .modal-content div button svg {
+    fill: #c8c2b7;
+  }
+  .modal-content div button svg:hover {
+    fill: #24292e;
+  }
+  .modal-content a {
+    text-decoration: none;
+    color: #24292e;
+    padding: 1.1em 1em;
+    border-bottom: 0.5px #e1e4e8 solid;
+    display: block;
+  }
+  .modal-content a:hover {
+    background: #f6f8fa;
+  }
+  .modal-content a svg {
+    margin-right: 0.5em;
+  }
   .footer ul {
     margin: .5em 3em;
     padding: 3em 1.2em;
