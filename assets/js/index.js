@@ -53,9 +53,66 @@ const navigation = {
         }
       };
     }
-  }
-};
+  },
 
+  openProfile() {
+    const openProfile = document.getElementById("openProfile");
+    const viewProfile = document.getElementById("viewProfile");
+
+    openProfile.addEventListener("click", (e) => {
+      e.preventDefault();
+      viewProfile.classList.toggle("hide");
+    });
+
+    openProfile.addEventListener("blur", () => {
+      viewProfile.classList.add("hide");
+    });
+  },
+
+  openProjects() {
+    const openProjects = document.getElementById("openProjects");
+    const viewProjects = document.getElementById("viewProjects");
+
+    openProjects.addEventListener("click", (e) => {
+      e.preventDefault();
+      viewProjects.classList.toggle("hide");
+    });
+
+    openProjects.addEventListener("blur", () => {
+      viewProjects.classList.add("hide");
+    });
+  },
+
+  openLanguages() {
+    const openLanguages = document.getElementById("openLanguage");
+    const showLanguages = document.getElementById("showLanguages");
+
+    openLanguages.addEventListener("click", () => {
+      showLanguages.classList.toggle("hide");
+    });
+
+    openLanguages.addEventListener("blur", () => {
+      showLanguages.classList.add("hide");
+    });
+  },
+
+  openTypes() {
+    const openTypes = document.getElementById("openTypes");
+    const showTypes = document.getElementById("showTypes");
+
+    openTypes.addEventListener("click", () => {
+      showTypes.classList.toggle("hide");
+    });
+
+    openTypes.addEventListener("blur", () => {
+      showTypes.classList.add("hide");
+    });
+  },
+};
 navigation.openBurgerMenuDrawer();
 navigation.mobileNav();
 navigation.desktopNav()
+navigation.openLanguages()
+navigation.openTypes()
+navigation.openProfile()
+navigation.openProjects()

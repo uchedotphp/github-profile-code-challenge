@@ -104,12 +104,12 @@
                   <img
                     width="21"
                     height="21"
-                    src="./assets/images/uchedotphp-github.jpeg"
+                    src="./assets/images/gitty.png"
                     style="border-radius: 50%"
                     alt=""
                     srcset=""
                   />
-                  <span style="padding-left: 0.5em"> uchedotphp </span>
+                  <span style="padding-left: 0.5em"> Github Username </span>
                 </a>
               </li>
               <li>
@@ -202,7 +202,7 @@
                 />
               </svg>
             </a>
-            <a href="#" class="spaced">
+            <a href="#" id="openProjects" class="spaced">
               <svg
                 class="octicon octicon-plus"
                 viewBox="0 0 16 16"
@@ -229,9 +229,23 @@
                 />
               </svg>
             </a>
-            <a href="#" class="spaced">
+
+             <!-- open repositories and projects drop down -->
+          <div id="viewProjects" class="drop-down-proects-and-profile dropdown-projects hide">
+            <div class='quick-links'>
+              <a href="#">New repository</a>
+              <a href="#">Import repository</a>
+              <a href="#">New gist</a>
+              <a href="#">New organization</a>
+              <a href="#">New project</a>
+            </div>
+          </div>
+          <!-- end of repositories and projects drop down -->
+
+
+            <a id="openProfile" href="#" class="spaced">
               <img
-                src="./assets/images/uchedotphp-github.jpeg"
+                src="./assets/images/gitty.png"
                 style="border-radius: 50%"
                 width="21"
                 height="21"
@@ -252,6 +266,40 @@
               </svg>
             </a>
           </div>
+
+          <!-- open profile preference drop down -->
+          <div id="viewProfile" class="drop-down-proects-and-profile dropdown-profile hide">
+            <a href="#" class="signed-in">
+              
+                Signed in as
+              <b>
+                Github Username
+              </b>
+            </a>
+            <div class="git-stat">
+              <a href="#" class="box">
+                <span>
+                  <g-emoji class="g-emoji" alias="earth_americas" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f30e.png">🌎</g-emoji>
+                </span>
+                Available Remot...
+              </a>
+            </div>
+            <div class='quick-links'>
+              <a href="#">Your profile</a>
+              <a href="#">Your repositories</a>
+              <a href="#">Your projects</a>
+              <a href="#">Your stars</a>
+              <a href="#">Your gists</a>
+            </div>
+            <div class="preferences">
+              <a href="#">Upgrade</a>
+              <a href="#">Feature preview</a>
+              <a href="#">Help</a>
+              <a href="#">Settings</a>
+              <a href="#">Sign out</a>
+            </div>
+          </div>
+          <!-- end profile prefence drop down -->
         </div>
         <!-- end of top-desktop-header -->
       </header>
@@ -602,7 +650,7 @@
                 <input type="text" placeholder="Find a repository..." />
                 <div class="search-repo-buttons">
                   <div>
-                    <button class="button-white">
+                    <button id="openTypes" class="button-white">
                       Type: All
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -617,7 +665,143 @@
                         />
                       </svg>
                     </button>
-                    <button class="button-white">
+                    <div
+                      id="showTypes"
+                      class="drop-down-type-and-language push-type hide"
+                    >
+                      <b>
+                        Select type
+                        <button>
+                          <svg
+                            aria-label="Close menu"
+                            class="octicon octicon-x"
+                            viewBox="0 0 16 16"
+                            version="1.1"
+                            width="16"
+                            height="16"
+                            role="img"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"
+                            ></path>
+                          </svg>
+                        </button>
+                      </b>
+                      <a href="#">
+                        <svg
+                          class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check"
+                          viewBox="0 0 16 16"
+                          version="1.1"
+                          width="16"
+                          height="16"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"
+                          ></path>
+                        </svg>
+                        All
+                      </a>
+                      <a href="#">
+                        <svg
+                          class="not-visible octicon octicon-check SelectMenu-icon SelectMenu-icon--check"
+                          viewBox="0 0 16 16"
+                          version="1.1"
+                          width="16"
+                          height="16"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"
+                          ></path>
+                        </svg>
+                        Public</a
+                      >
+                      <a href="#">
+                        <svg
+                          class="not-visible octicon octicon-check SelectMenu-icon SelectMenu-icon--check"
+                          viewBox="0 0 16 16"
+                          version="1.1"
+                          width="16"
+                          height="16"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"
+                          ></path>
+                        </svg>
+                        Private</a
+                      >
+                      <a href="#">
+                        <svg
+                          class="not-visible octicon octicon-check SelectMenu-icon SelectMenu-icon--check"
+                          viewBox="0 0 16 16"
+                          version="1.1"
+                          width="16"
+                          height="16"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"
+                          ></path>
+                        </svg>
+                        Sources</a
+                      >
+                      <a href="#">
+                        <svg
+                          class="not-visible octicon octicon-check SelectMenu-icon SelectMenu-icon--check"
+                          viewBox="0 0 16 16"
+                          version="1.1"
+                          width="16"
+                          height="16"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"
+                          ></path>
+                        </svg>
+                        Forks</a
+                      >
+                      <a href="#">
+                        <svg
+                          class="not-visible octicon octicon-check SelectMenu-icon SelectMenu-icon--check"
+                          viewBox="0 0 16 16"
+                          version="1.1"
+                          width="16"
+                          height="16"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"
+                          ></path>
+                        </svg>
+                        Archived</a
+                      >
+                      <a href="#">
+                        <svg
+                          class="not-visible octicon octicon-check SelectMenu-icon SelectMenu-icon--check"
+                          viewBox="0 0 16 16"
+                          version="1.1"
+                          width="16"
+                          height="16"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"
+                          ></path>
+                        </svg>
+                        Mirrors</a
+                      >
+                    </div>
+                    <button class="button-white" id="openLanguage">
                       Language: All
                       <svg
                         xmlns="http://www.w3.org/2000/svg"
@@ -632,6 +816,142 @@
                         />
                       </svg>
                     </button>
+                    <div
+                      id="showLanguages"
+                      class="drop-down-type-and-language push-lang hide"
+                    >
+                      <b>
+                        Select language
+                        <button>
+                          <svg
+                            aria-label="Close menu"
+                            class="octicon octicon-x"
+                            viewBox="0 0 16 16"
+                            version="1.1"
+                            width="16"
+                            height="16"
+                            role="img"
+                          >
+                            <path
+                              fill-rule="evenodd"
+                              d="M3.72 3.72a.75.75 0 011.06 0L8 6.94l3.22-3.22a.75.75 0 111.06 1.06L9.06 8l3.22 3.22a.75.75 0 11-1.06 1.06L8 9.06l-3.22 3.22a.75.75 0 01-1.06-1.06L6.94 8 3.72 4.78a.75.75 0 010-1.06z"
+                            ></path>
+                          </svg>
+                        </button>
+                      </b>
+                      <a href="#">
+                        <svg
+                          class="octicon octicon-check SelectMenu-icon SelectMenu-icon--check"
+                          viewBox="0 0 16 16"
+                          version="1.1"
+                          width="16"
+                          height="16"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"
+                          ></path>
+                        </svg>
+                        All
+                      </a>
+                      <a href="#">
+                        <svg
+                          class="not-visible octicon octicon-check SelectMenu-icon SelectMenu-icon--check"
+                          viewBox="0 0 16 16"
+                          version="1.1"
+                          width="16"
+                          height="16"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"
+                          ></path>
+                        </svg>
+                        HTML</a
+                      >
+                      <a href="#">
+                        <svg
+                          class="not-visible octicon octicon-check SelectMenu-icon SelectMenu-icon--check"
+                          viewBox="0 0 16 16"
+                          version="1.1"
+                          width="16"
+                          height="16"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"
+                          ></path>
+                        </svg>
+                        JavaScript</a
+                      >
+                      <a href="#">
+                        <svg
+                          class="not-visible octicon octicon-check SelectMenu-icon SelectMenu-icon--check"
+                          viewBox="0 0 16 16"
+                          version="1.1"
+                          width="16"
+                          height="16"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"
+                          ></path>
+                        </svg>
+                        Vue</a
+                      >
+                      <a href="#">
+                        <svg
+                          class="not-visible octicon octicon-check SelectMenu-icon SelectMenu-icon--check"
+                          viewBox="0 0 16 16"
+                          version="1.1"
+                          width="16"
+                          height="16"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"
+                          ></path>
+                        </svg>
+                        CSS</a
+                      >
+                      <a href="#">
+                        <svg
+                          class="not-visible octicon octicon-check SelectMenu-icon SelectMenu-icon--check"
+                          viewBox="0 0 16 16"
+                          version="1.1"
+                          width="16"
+                          height="16"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"
+                          ></path>
+                        </svg>
+                        PHP</a
+                      >
+                      <a href="#">
+                        <svg
+                          class="not-visible octicon octicon-check SelectMenu-icon SelectMenu-icon--check"
+                          viewBox="0 0 16 16"
+                          version="1.1"
+                          width="16"
+                          height="16"
+                          aria-hidden="true"
+                        >
+                          <path
+                            fill-rule="evenodd"
+                            d="M13.78 4.22a.75.75 0 010 1.06l-7.25 7.25a.75.75 0 01-1.06 0L2.22 9.28a.75.75 0 011.06-1.06L6 10.94l6.72-6.72a.75.75 0 011.06 0z"
+                          ></path>
+                        </svg>
+                        Dart</a
+                      >
+                    </div>
                   </div>
                   <button class="button-green">
                     <svg
@@ -724,7 +1044,6 @@
 
     <script src="https://cdnjs.cloudflare.com/ajax/libs/moment.js/2.29.1/moment.min.js"></script>
     <script>
-      // moment().format();
     </script>
     <script src="./assets/js/secret.js"></script>
     <script src="./assets/js/dom-selectors.js"></script>

@@ -59,6 +59,10 @@ body {
   }
 }
 
+.hide{
+  display: none;
+}
+
 
 // header styles
 header {
@@ -93,6 +97,11 @@ header {
 }
 
 .repositories {
+  .search-repo {
+    input:focus {
+      // border: 1px solid blue;
+    }
+  }
     .list-of-repos {
     padding: 0 1.2em;
     .single-repo {

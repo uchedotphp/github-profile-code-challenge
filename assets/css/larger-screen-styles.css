@@ -76,6 +76,7 @@
     margin-right: 0;
   }
   .top-header-desktop .right-side {
+    position: relative;
     display: -webkit-box;
     display: -ms-flexbox;
     display: flex;
@@ -326,6 +327,7 @@
         grid-template-columns: 26% auto;
   }
   main .repos .repositories .search-repo {
+    position: relative;
     padding: 1em 1.2em;
     display: -webkit-box;
     display: -ms-flexbox;
@@ -391,6 +393,137 @@
   }
   main .repos .repositories .search-repo .search-repo-buttons .button-green span {
     margin-left: 0.5em;
+  }
+  .drop-down-proects-and-profile {
+    position: absolute;
+    top: 3.2em;
+    background: #fff;
+    color: #24292e;
+    border-radius: 5px;
+    -webkit-box-shadow: 0 0 5px #bbb8b8;
+            box-shadow: 0 0 5px #bbb8b8;
+  }
+  .drop-down-proects-and-profile .signed-in {
+    color: #24292e;
+    width: 100%;
+    padding: 1em 1.5em;
+    text-decoration: none;
+    display: inline-block;
+    border-bottom: 1px solid #e1e4e8;
+  }
+  .drop-down-proects-and-profile .signed-in b {
+    display: block;
+    padding: .4em 0;
+  }
+  .drop-down-proects-and-profile .git-stat {
+    padding: 1em 1.5em;
+    border-bottom: 1px solid #e1e4e8;
+  }
+  .drop-down-proects-and-profile .git-stat .box {
+    text-decoration: none;
+    color: #24292e;
+    padding: .4em;
+    border-radius: 5px;
+    border: 1px solid #e1e4e8;
+    font-size: .9em;
+  }
+  .drop-down-proects-and-profile .git-stat .box:hover {
+    color: blue;
+  }
+  .drop-down-proects-and-profile .quick-links {
+    padding: .3em 0;
+  }
+  .drop-down-proects-and-profile .preferences {
+    border-top: 1px solid #e1e4e8;
+    padding: .3em 0;
+  }
+  .dropdown-profile {
+    right: 1.5em;
+  }
+  .dropdown-profile .quick-links a, .dropdown-profile .preferences a {
+    padding: .5em 1.5em;
+    display: block;
+    text-decoration: none;
+    color: #24292e;
+  }
+  .dropdown-profile .quick-links a:hover, .dropdown-profile .preferences a:hover {
+    background: blue;
+    color: #fff;
+  }
+  .dropdown-projects {
+    right: 4em;
+  }
+  .dropdown-projects .quick-links {
+    width: 100%;
+  }
+  .dropdown-projects .quick-links a {
+    padding: .5em 1.5em;
+    display: block;
+    text-decoration: none;
+    color: #24292e;
+  }
+  .dropdown-projects .quick-links a:hover {
+    background: blue;
+    color: #fff;
+  }
+  .drop-down-type-and-language {
+    position: absolute;
+    top: 4.5em;
+    background: #fff;
+    color: #24292e;
+    border-radius: 5px;
+    width: 24em;
+    font-size: 0.9em;
+    -webkit-box-shadow: 0 0 5px #bbb8b8;
+            box-shadow: 0 0 5px #bbb8b8;
+  }
+  .drop-down-type-and-language b {
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-box-pack: justify;
+        -ms-flex-pack: justify;
+            justify-content: space-between;
+    padding: 0.5em 1em;
+    border-bottom: 1px solid #e1e4e8;
+    color: #24292e;
+  }
+  .drop-down-type-and-language b button {
+    outline: none;
+    border: none;
+    background: transparent;
+    cursor: pointer;
+  }
+  .drop-down-type-and-language b button svg {
+    fill: #c8c2b7;
+  }
+  .drop-down-type-and-language b button svg:hover {
+    fill: #24292e;
+  }
+  .drop-down-type-and-language a {
+    text-decoration: none;
+    color: #24292e;
+    padding: 0.4375em 1em;
+    border-bottom: 0.5px #e1e4e8 solid;
+    display: block;
+  }
+  .drop-down-type-and-language a:hover {
+    background: #f6f8fa;
+  }
+  .drop-down-type-and-language a svg {
+    margin-right: 0.5em;
+  }
+  .push-lang {
+    right: 8em;
+  }
+  .push-type {
+    right: 19.5em;
+  }
+  .button-white:focus {
+    outline: none;
+  }
+  .not-visible {
+    visibility: hidden;
   }
   .footer {
     margin: 0.5em 3em;

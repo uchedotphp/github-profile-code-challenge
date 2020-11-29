@@ -62,6 +62,7 @@
     }
 
     .right-side {
+      position: relative;
       @include flexCenter;
 
       a {
@@ -99,7 +100,7 @@
     top: 0;
     width: 100%;
   }
-  
+
   main {
     margin-top: 2em;
 
@@ -316,6 +317,7 @@
     .repos {
       .repositories {
         .search-repo {
+          position: relative;
           // margin: 1em 0;
           // padding: 1em 1.2em;
           // background: red;
@@ -360,6 +362,170 @@
         }
       }
     }
+  }
+
+  // drop-downs
+  .drop-down-proects-and-profile {
+    position: absolute;
+    top: 3.2em;
+    
+    background: #fff;
+    color: $base-black-background;
+    border-radius: 5px;
+    box-shadow: 0 0 5px #bbb8b8;
+
+    .signed-in {
+      color: $base-black-background;
+      width: 100%;
+        padding: 1em 1.5em;
+        text-decoration: none;
+        display: inline-block;
+        border-bottom: 1px solid #e1e4e8;
+        b {
+          display: block;
+          padding: .4em 0;
+        }
+    }
+
+    .git-stat {
+      padding: 1em 1.5em;
+      border-bottom: 1px solid #e1e4e8;
+      .box {
+        text-decoration: none;
+        color: $base-black-background;
+        padding: .4em;
+        border-radius: 5px;
+        border: 1px solid #e1e4e8;
+        font-size: .9em;
+
+        &:hover {
+          color: blue;
+        }
+      }
+    }
+
+    .quick-links {
+      padding: .3em 0;
+      a{
+
+      }
+    }
+
+    .preferences {
+      border-top: 1px solid #e1e4e8;
+      padding: .3em 0;
+      a {
+        
+      }
+    }
+  }
+
+  .dropdown-profile{
+    right: 1.5em;
+
+    .quick-links, .preferences {
+      a {
+        padding: .5em 1.5em;
+        display: block;
+        text-decoration: none;
+        color: $base-black-background;
+
+        &:hover {
+          background: blue;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+  .dropdown-projects {
+    right: 4em;
+
+    .quick-links {
+      width: 100%;
+      a {
+        padding: .5em 1.5em;
+        display: block;
+        text-decoration: none;
+        color: $base-black-background;
+
+        &:hover {
+          background: blue;
+          color: #fff;
+        }
+      }
+    }
+  }
+
+
+
+
+  .drop-down-type-and-language {
+    // display: none;
+    position: absolute;
+    top: 4.5em;
+    
+    background: #fff;
+    color: $base-black-background;
+    border-radius: 5px;
+    width: 24em;
+    font-size: 0.9em;
+    box-shadow: 0 0 5px #bbb8b8;
+
+    b {
+      button {
+        outline: none; 
+        border: none; 
+        background: transparent; 
+        cursor: pointer;
+
+
+        svg {
+          fill: $hover-color;
+
+          &:hover {
+            fill: $base-black-background;
+          }
+        }
+      }
+      display: flex;
+      justify-content: space-between;
+      padding: 0.5em 1em;
+      border-bottom: 1px solid #e1e4e8;
+      color: $base-black-background;
+
+    }
+    a {
+      text-decoration: none;
+      color: $base-black-background;
+      padding: 0.4375em 1em;
+      border-bottom: 0.5px #e1e4e8 solid;
+      display: block;
+
+      &:hover {
+        background: #f6f8fa;
+      }
+
+      svg {
+        margin-right: 0.5em;
+      }
+    }
+  }
+
+  .push-lang{
+    right: 8em;
+  }
+
+  .push-type{
+    right: 19.5em;
+  }
+
+  .button-white:focus {
+    outline: none;
+  }
+
+  .not-visible {
+    visibility: hidden;
   }
 
   .footer {

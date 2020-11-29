@@ -1,6 +1,19 @@
 const saveData = ({ data }) => {
   const profileImages = [...document.images]; //fetch all the images currently on the document
 
+  // top bar navigation
+  const profileImageZero = (profileImages[0].src = `${data.user.avatarUrl}`);
+  const mobileNavUsername = (document.querySelector(
+    ".mobi-links"
+  ).children[5].children[0].children[1].innerHTML = data.user.login);
+  const profileImagesOne = profileImages[1].src = `${data.user.avatarUrl}`
+  const viewProfileNode = document.querySelector('.signed-in').children[0].innerHTML =
+    data.user.login
+  console.log(mobileNavUsername);
+
+
+
+
   //   for the navigation
   const navBioImage = (profileImages[2].src = `${data.user.avatarUrl}`);
   const navNode = (document.getElementById("img").children[1].innerHTML =
@@ -261,4 +274,5 @@ const saveData = ({ data }) => {
 </div>
     `;
   });
+
 };
