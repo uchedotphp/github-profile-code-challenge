@@ -76,13 +76,7 @@ const graphQl = {
       method: "POST",
       headers: {
         "Content-Type": "application/json",
-        // Authorization: `bearer ${
-        //   this.development_env == "http:"
-        //     ? github_secret
-        //     : process.env.github_secret
-        // }`,
-        Authorization: `bearer ${github_secret}`,
-        // Authorization: `bearer ${process.env.github_secret || github_secret}`
+        Authorization: `bearer ${github_secret}`, //replace the variable github_secret with your git hub token
       },
       body: JSON.stringify({ query: gitHubGraphQLAPI(username) }),
     };
