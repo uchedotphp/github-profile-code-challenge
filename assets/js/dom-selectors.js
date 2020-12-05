@@ -1,74 +1,87 @@
 const saveData = ({ data }) => {
-  const profileImages = [...document.images]; //fetch all the images currently on the document
+  // collecting result data
+  const avatar = data.user.avatarUrl;
+  const userName = data.user.login;
+  const repositories = data.user.repositories;
+  const projects = data.user.projects;
+  const status = data.user.status;
+  const fullName = data.user.name;
+  const biography = data.user.bio;
+  const location = data.user.location;
+  const email = data.user.email;
+  const followers = data.user.followers;
+  const following = data.user.following;
+  const starredRepositories = data.user.starredRepositories;
+  const twitter = data.user.twitterUsername;
+
+  const [
+    profileImageOne,
+    profileImageTwo,
+    profileImageThree,
+    profileImageFour,
+  ] = [...document.images];
 
   // top bar navigation
-  const profileImageZero = (profileImages[0].src = `${data.user.avatarUrl}`);
+  profileImageOne.src = `${avatar}`;
   const mobileNavUsername = (document.querySelector(
     ".mobi-links"
-  ).children[5].children[0].children[1].innerHTML = data.user.login);
-  const profileImagesOne = profileImages[1].src = `${data.user.avatarUrl}`
-  const viewProfileNode = document.querySelector('.signed-in').children[0].innerHTML =
-    data.user.login
-  console.log(mobileNavUsername);
-
-
-
+  ).children[5].children[0].children[1].innerHTML = userName);
+  profileImageTwo.src = `${avatar}`;
+  document.querySelector(".signed-in").children[0].innerHTML = userName;
 
   //   for the navigation
-  const navBioImage = (profileImages[2].src = `${data.user.avatarUrl}`);
-  const navNode = (document.getElementById("img").children[1].innerHTML =
-    data.user.login);
+  profileImageThree.src = `${avatar}`;
+  document.getElementById("img").children[1].innerHTML = userName;
 
   const countsRepos = [...document.querySelectorAll(".ripper")];
-  if (data.user.repositories.totalCount) {
+  if (repositories.totalCount) {
     countsRepos.forEach((element) => {
       const repoCount = document.createElement("span");
       repoCount.className = "repo-number";
-      repoCount.innerHTML = data.user.repositories.totalCount;
+      repoCount.innerHTML = repositories.totalCount;
       element.appendChild(repoCount);
     });
   }
   const countsProjects = [...document.querySelectorAll(".projecter")];
-  if (data.user.projects.totalCount) {
+  if (projects.totalCount) {
     countsProjects.forEach((element) => {
       const repoCount = document.createElement("span");
       repoCount.className = "repo-number";
-      repoCount.innerHTML = data.user.projects.totalCount;
+      repoCount.innerHTML = projects.totalCount;
       element.appendChild(repoCount);
     });
   }
 
   //   for the aside bio
-  const asideBioImage = (profileImages[3].src = `${data.user.avatarUrl}`);
+  profileImageFour.src = `${avatar}`;
   const statusNode = document.querySelector(".float-stat");
   const statusText = document.querySelector(".status-text");
   const statusImage = document.createElement("span");
   statusImage.innerHTML = `<g-emoji class="g-emoji" alias="earth_americas" fallback-src="https://github.githubassets.com/images/icons/emoji/unicode/1f30e.png">🌎</g-emoji>`;
   statusNode.insertBefore(statusImage, statusText);
-  statusText.innerHTML = data.user.status.message;
-  const bioName = (document.querySelector(".name").children[0].innerHTML =
-    data.user.name);
-  const bioUsername = (document.querySelector(".name").children[1].innerHTML =
-    data.user.login);
-  const bioText = (document.querySelector(".bio-text").innerHTML =
-    data.user.bio);
+  statusText.innerHTML = status.message;
+  const bioName = (document.querySelector(
+    ".name"
+  ).children[0].innerHTML = fullName);
+  const bioUsername = (document.querySelector(
+    ".name"
+  ).children[1].innerHTML = userName);
+  const bioText = (document.querySelector(".bio-text").innerHTML = biography);
   const contact = document.querySelector(".email");
-  const location = (contact.children[0].children[1].innerHTML =
-    data.user.location);
-  const emailAddress = (contact.children[1].children[1].innerHTML =
-    data.user.email);
-  const twitterHandle = (contact.children[2].children[1].innerHTML = `@${data.user.twitterUsername}`);
+  const locationNode = (contact.children[0].children[1].innerHTML = location);
+  const emailAddress = (contact.children[1].children[1].innerHTML = email);
+  const twitterHandle = (contact.children[2].children[1].innerHTML = `@${twitter}`);
   const followingSection = document.querySelector(".following");
-  const followers = (followingSection.children[0].children[1].innerHTML =
-    data.user.followers.totalCount);
-  const following = (followingSection.children[1].children[0].innerHTML =
-    data.user.following.totalCount);
+  const followersNode = (followingSection.children[0].children[1].innerHTML =
+    followers.totalCount);
+  const followingNode = (followingSection.children[1].children[0].innerHTML =
+    following.totalCount);
   const starred = (followingSection.children[2].children[1].innerHTML =
-    data.user.starredRepositories.totalCount);
+    starredRepositories.totalCount);
 
   // repository data
   const repos = document.querySelector(".list-of-repos");
-  data.user.repositories.nodes.reverse().forEach((element) => {
+  repositories.nodes.reverse().forEach((element) => {
     let createdDay = new Date(element.updatedAt);
     let currentDay = new Date();
     let diff = Math.floor(
@@ -274,5 +287,4 @@ const saveData = ({ data }) => {
 </div>
     `;
   });
-
 };
